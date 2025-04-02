@@ -102,9 +102,6 @@ button.onclick = function(){
         }
         //Monthly loan balance = total morgage amount - (monthly payment)
         info.innerHTML += `<p>Monthly Loan Balance: $${((loanAmount + ((monthlyPayment * termYears * 12) - loanAmount)) - monthlyPayment).toFixed(2)}</p>`
-
-
     }
-    
 };
 
