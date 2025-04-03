@@ -47,7 +47,7 @@ button.onclick = function(){
         //Total interest amount (total interest = (monthlyPayment * termYears * 12 ) - loanAmount )
         info.innerHTML += `<p>Total Interest Amount: $${((monthlyPayment * termYears * 12) - loanAmount).toFixed(2)}</p>`;        
         //Total mortgage amount (total mortgage amount = loanAmount + totalInterest )
-        info.innerHTML += `<p>Total Mortgage Amount: ${loanAmount + ((monthlyPayment * termYears * 12) - loanAmount).toFixed(2)}</p>`
+        info.innerHTML += `<p>Total Mortgage Amount: ${Number(loanAmount) + Number(((monthlyPayment * termYears * 12) - Number(loanAmount)).toFixed(2))}</p>`
         //Display the monthly mortgage payments and the mortgage loan balance for each month.
         for (let i = 1; i <= termYears*12 ; i++){
             let month = document.createElement('p');
